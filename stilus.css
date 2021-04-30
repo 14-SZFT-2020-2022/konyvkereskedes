@@ -10,3 +10,15 @@
     color: green;
     padding: 5px;
 }
+
+img {
+    width: 200px;
+    height: 300px;
+    float: right;
+}
+
+.tarto {
+    background-color: rgb(142, 245, 245);
+    margin: 20px;
+    padding: 20px;
+}
