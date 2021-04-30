@@ -18,6 +18,7 @@ if ($result -> num_rows > 0) {
         $sorok .= '<p><b>Kiadó: </b>' . $row['kiado'] . '</p>';
         $sorok .= '<p><b>Oldalszám: </b>' . $row['oldalakSzama'] . '</p>';
         $sorok .= '<p><b>ISBN: </b>' . $row['isbn'] . '</p></div>';
+        $sorok .= '<button class="gomb">Rendel</button>';
         $sorok .= '</div>';
         $sorok .= '</div>';
     }

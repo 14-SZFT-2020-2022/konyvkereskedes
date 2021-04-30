@@ -25,7 +25,7 @@ if (isset($_POST['feltolt'])) {
 
             $result = $conn -> query($sql); 
              
-            if($result === TRUE){ 
+            if($result === TRUE) { 
                 $status = 'success'; 
                 $statusMsg = 'Az információk sikeresen feltöltődtek.'; 
             } else { 

@@ -1,7 +1,5 @@
 <?php
-
     include './lekerdez.php';
-
 ?>
 
 <!DOCTYPE html>
