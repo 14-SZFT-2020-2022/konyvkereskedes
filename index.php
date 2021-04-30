@@ -18,7 +18,7 @@
 </head>
 <body>
     <div class='container'>
-        <h3>Könykereskedés</h3>
+        <h3>Könyvkereskedés</h3>
 <?php
     echo $sorok;
 ?>
