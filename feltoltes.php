@@ -20,7 +20,7 @@
             $kiir = '<p class="' . $status . '">' . $statusMsg . '</p>';
             echo $kiir;
         } ?>
-        <form action='' method='post' encrypt='multipart/form-data'>
+        <form action='' method='post' enctype='multipart/form-data' autocomplete='off'>
             <div class='form-group'>
                 <label for='szerzo'>Szerző</label>
                 <input type='text' class='form-control' id='szerzo' name='szerzo' />
@@ -42,8 +42,8 @@
                 <input type='number' class='form-control' id='isbn' name='isbn' />
             </div>
             <div class='form-group'>
-                <label for='borito'>Borítókép</label>
-                <input type='file' class='form-control-file' id='borito' name='borito' />
+                <label for='image'>Borítókép</label>
+                <input type='file' class='form-control-file' id='image' name='image' />
             </div>
             <button type='submit' class='btn btn-primary' name='feltolt'>Feltöltés</button>
         </form>

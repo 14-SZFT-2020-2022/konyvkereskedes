@@ -5,18 +5,25 @@ require_once './kapcsolat.php';
 $status = $statusMsg = ''; 
 if (isset($_POST['feltolt'])) { 
     $status = 'error'; 
-    if (!empty($_FILES['borito']['name'])) {  
-        $fileName = basename($_FILES['borito']['name']); 
+    if (!empty($_FILES['image']['name'])) {  
+        $fileName = basename($_FILES['image']['name']); 
         $fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
          
         $allowTypes = array('jpg','png','jpeg','gif'); 
         if (in_array($fileType, $allowTypes)) { 
-            $image = $_FILES['borito']['tmp_name']; 
+            $image = $_FILES['image']['tmp_name']; 
             $imgContent = addslashes(file_get_contents($image)); 
-         
-            // $sql = 'INSERT into images (image, uploaded) VALUES ('$imgContent', NOW())'
+            
+            $szerzo = $_POST['szerzo'];
+            $cim = $_POST['cim'];
+            $kiado = $_POST['kiado'];
+            $oldalSzam = $_POST['oldalSzam'];
+            $isbn = $_POST['isbn'];
 
-            $result = $db -> query($sql); 
+            $sql = 'INSERT into `libri` (`szerzo`, `cim`, `kiado`, `oldalakSzama`, `isbn`, `borito`) ';
+            $sql .= 'VALUES ("' . $szerzo . '", "' . $cim . '", "' . $kiado . '", "' . $oldalSzam . '", "' . $isbn . '", "' . $imgContent . '") ';
+
+            $result = $conn -> query($sql); 
              
             if($result === TRUE){ 
                 $status = 'success'; 
